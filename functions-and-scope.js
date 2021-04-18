@@ -109,21 +109,17 @@ console.log(averageGrade(grades)); // Zie lijn 71
 
 // Check wat het hoogste cijfer is
 
-// const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
-function highestGrade (grades) {
+let highestNumber = 0;
+    for (let j = 0; j < grades.length; j++) {
 
-    // for (let highestGrades = 0; 0 < grades.length; highestGrades++) {
-    //     // Als een van de cijfers uit de array het hoogste cijfer is, print deze dan uit. Bijv: 4, 5, 6. 6 is het hoogst, print deze!
-    // highestGrades = Math.max(grades);
-    // }
-    // return highestGrades;
-    return Math.max(...grades); // Waarom die drie puntjess watt
-}
+        if (grades[j] > highestNumber) {
+            highestNumber = grades[j];
+        }
+    }
+console.log(highestNumber);
 
-console.log(highestGrade(grades));
-console.log(highestGrade([6, 4, 5]));
-console.log(highestGrade([8, 9, 4, 6, 10]));
+
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
@@ -133,3 +129,17 @@ console.log(highestGrade([8, 9, 4, 6, 10]));
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+
+function highestGrade (grades) {
+    let highestNumber = 0;
+    for (let j = 0; j < grades.length; j++) {
+
+        if (grades[j] > highestNumber) {
+            highestNumber = grades[j];
+        }
+    }
+    return highestNumber;
+}
+
+console.log(highestGrade(grades));
+console.log(highestGrade([2, 50, 10]));

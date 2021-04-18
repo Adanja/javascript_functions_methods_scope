@@ -61,36 +61,37 @@ typeOfEmail("adanja@novi.nl");
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
-// function checkEmailValidity (mail) {
-//     if (mail.includes(",") || (mail.charAt(mail.length -1) === ".") || (mail.charAt(mail.indexOf("@") + 1) === ".")) {
-//         // console.log("False! Er zit een , of . op het eind.");
-//         return false;
-//     }
-//
-//     if (mail.includes("@")) {
-//         return true;
-//     } else {
-//         console.log("Je email moet een @ bevatten");
-//     }
-//     return false;
-// }
-
-// console.log(checkEmailValidity("adanja-s@hotmail.com"));
-// console.log(checkEmailValidity("peter@h.com"));
-
-
-function  checkEmailValidity (email) {
-    if (email.includes(',')) {
+function checkEmailValidity (mail) {
+    if (mail.includes(",") || (mail.charAt(mail.length -1) === ".") || (mail.charAt(mail.indexOf("@") + 1) === ".")) {
+        // console.log("False! Er zit een , of . op het eind.");
         return false;
     }
 
-    if (email.includes('@') && (email.endsWith(".nl")) || (email.endsWith(".com"))) {
-    return true;
+    if (mail.includes("@")) {
+        return true;
+    } else {
+        console.log("Je email moet een @ bevatten");
     }
     return false;
 }
 
-console.log(checkEmailValidity("neekennvi@.nl"));
+console.log(checkEmailValidity("adanja-s@hotmail.com"));
+console.log(checkEmailValidity("peter@h.com"));
+
+
+// Dit zou ook moeten werken, maar minder compleet
+// function  checkEmailValidity (email) {
+//     if (email.includes(',')) {
+//         return false;
+//     }
+//
+//     if (email.includes('@') && (email.endsWith(".nl")) || (email.endsWith(".com"))) {
+//     return true;
+//     }
+//     return false;
+// }
+//
+// console.log(checkEmailValidity("neekennvi@.nl"));
 
 
 
