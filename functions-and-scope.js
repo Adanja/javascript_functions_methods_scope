@@ -110,6 +110,14 @@ console.log(averageGrade(grades)); // Zie lijn 71
 // Check wat het hoogste cijfer is
 
 
+let highestNumber = 0;
+    for (let j = 0; j < grades.length; j++) {
+
+        if (grades[j] > highestNumber) {
+            highestNumber = grades[j];
+        }
+    }
+console.log(highestNumber);
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
@@ -122,3 +130,16 @@ console.log(averageGrade(grades)); // Zie lijn 71
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
 
+function highestGrade (grades) {
+    let highestNumber = 0;
+    for (let j = 0; j < grades.length; j++) {
+
+        if (grades[j] > highestNumber) {
+            highestNumber = grades[j];
+        }
+    }
+    return highestNumber;
+}
+
+console.log(highestGrade(grades));
+console.log(highestGrade([2, 50, 10]));
